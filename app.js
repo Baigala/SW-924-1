@@ -39,10 +39,10 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 /*Дасгал 1
 Өөрийн төрсөн оноо хувьсагчинд хадгалаад одоо байгаа оноос хасч насаа гаргаж ирдэг програм бич.
 */
-var torsonOn = +prompt("torson onoo oruulna uu?");
-var odooBgaOn = 2022;
-var nas = odooBgaOn - torsonOn;
-console.log(nas);
+// var torsonOn = +prompt("torson onoo oruulna uu?");
+// var odooBgaOn = 2022;
+// var nas = odooBgaOn - torsonOn;
+// console.log(nas);
 
 // Math.pow(3, 2);
 // Math.sqrt(16);
@@ -53,8 +53,26 @@ console.log(nas);
 urt = PiToo * 2 * r;
 talbai = PiToo * r * r;
 */
-var r = +prompt("radiusaa oruulna uu?");
-var urt = Math.PI * 2 * r;
-var talbai = Math.PI * Math.pow(r, 2);
-console.log(urt);
-console.log(talbai);
+// var r = +prompt("radiusaa oruulna uu?");
+// var urt = Math.PI * 2 * r;
+// var talbai = Math.PI * Math.pow(r, 2);
+// console.log(urt);
+// console.log(talbai);
+
+/* 11.16 нөхцөл шалгалт */
+// if statement
+// < > <= >= && - and || - or !-not
+var nas = +prompt("nasaa oruulna uu?");
+// if (nas <= 18) {
+//   console.log("huuhed");
+// } else {
+//   console.log("tom hun");
+// }
+
+if (nas <= 12) {
+  console.log("huuhed");
+} else if (nas > 12 && nas <= 18) {
+  console.log("oswor nasnii huuhed");
+} else {
+  console.log("tom hun");
+}
