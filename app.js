@@ -67,20 +67,21 @@ talbai = PiToo * r * r;
 
 // }
 // < > <= >= && - and || - or !-not
-var nas = +prompt("nasaa oruulna uu?");
+// % - remainder operator үлдэгдлийг нь авдаг
+// var nas = +prompt("nasaa oruulna uu?");
 // if (nas <= 18) {
 //   console.log("huuhed");
 // } else {
 //   console.log("tom hun");
 // }
 
-if (nas <= 12) {
-  console.log("huuhed");
-} else if (nas > 12 && nas <= 18) {
-  console.log("oswor nasnii huuhed");
-} else {
-  console.log("tom hun");
-}
+// if (nas <= 12) {
+//   console.log("huuhed");
+// } else if (nas > 12 && nas <= 18) {
+//   console.log("oswor nasnii huuhed");
+// } else {
+//   console.log("tom hun");
+// }
 
 /* Дасгал №3:
 Гараас насаа оруулах үед Imgs folder доторх насны үечлэл зургийн дагуу өнөөдрийн хичээлээр үзсэн if statement ашиглан тухайн настай хүнийг аль үечлэлд хамрагдаж байгааг олох програм бичиж ирээрэй.
@@ -91,4 +92,37 @@ if (nas <= 12) {
 
 /* Дасгал №5:
 Гурвалжны суурь болон өндөр өгөгдсөн бол тухайн гурвалжны талбайг ол. 
-томьёо: (суурь * өндөр) / 2 */
+томьёо: (суурь*өндөр)/2 
+*/
+
+/* Дасгал №6:
+Гараас тоо аваад тэгш, сондгой эсэхийг нь шалгадаг програм бич. */
+
+/* Дүн гаргах ==> ирц - 10%, шалгалт - 30%, projects - 60% */
+
+// ternary operator ==> гурвалсан operator
+// promptoos тоон утга аваад num хувьсагчинд хадгалж өгөөд тухайн тоог сөрөг, бүхэл, бутархай эсэхийг шалгах программ бич.
+// var num = +prompt("toog oruul");
+// num < 0
+//   ? console.log("hasah too bna.")
+//   : num % 1 == 0
+//   ? console.log("buhel too bna.")
+//   : console.log("butarhai");
+
+// switch case ==>
+// var fruits = prompt("jimsnii neree oruulna uu?");
+// switch (fruits) {
+//   case "banana":
+//     console.log("гадил");
+//     break;
+//   case "apple":
+//     console.log("алим");
+//     break;
+//   case "watermelon":
+//     console.log("тарвас");
+//     break;
+//   default:
+//     console.log("iim jims medehgui.");
+// }
+
+// Гэрт: ternary operator ашиглаж насны үечлэл зургийн дагуу ажиллах програм бич.
