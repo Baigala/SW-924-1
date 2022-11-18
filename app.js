@@ -6,6 +6,7 @@
 // function
 // massiv
 // object
+// давтлага
 // es6 нэмэлтүүд
 // DOM
 // OOP
@@ -153,17 +154,20 @@ talbai = PiToo * r * r;
 
 /* Дасгал №8:
 10 хүртэл давталт хийж, тоо тус бүрийг өмнөх тооны нийлбэртэй консолд хэвлэнэ үү. */
-var sum = 0;
-for (var i = 1; i <= 10; i++) {
-  sum += i;
-  console.log(i + "hurtelh " + sum);
-}
+// var sum = 0;
+// for (var i = 1; i <= 10; i++) {
+//   sum += i;
+//   console.log(i + "hurtelh " + sum);
+// }
 
 /* Дасгал №9:
-
-*****
-
-*/
+ *****
+ */
+// var string = "";
+// for (var i = 1; i <= 5; i++) {
+//   string += "*";
+// }
+// console.log(string);
 
 /* Дасгал №10:
 
@@ -175,7 +179,12 @@ for (var i = 1; i <= 10; i++) {
 
 */
 
+// for (var i = 1; i <= 5; i++) {
+//   console.log("*");
+// }
+
 /* Дасгал №11:
+
 *
 **
 ***
@@ -183,3 +192,24 @@ for (var i = 1; i <= 10; i++) {
 *****
 
 */
+// console.log("aaaaaaaaa\nbbbbb");
+// prompt("hi\nYu bna");
+
+// var string = "";
+// for (var i = 1; i <= 10; i++) {
+//   for (var j = 0; j < i; j++) {
+//     string += "*";
+//   }
+//   string += "\n";
+// }
+// console.log(string);
+
+/* Гэрт:
+
+ *****
+ ****
+ ***
+ **
+ *
+ 
+ */
