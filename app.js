@@ -205,7 +205,7 @@ talbai = PiToo * r * r;
 // console.log(string);
 
 /* Гэрт:
-
+/* Дасгал №12:
  *****
  ****
  ***
@@ -213,3 +213,48 @@ talbai = PiToo * r * r;
  *
  
  */
+let string = "";
+for (let i = 0; i < 5; i++) {
+  for (let j = 0; j < 5 - i; j++) {
+    string += "*";
+  }
+  string += "\n";
+}
+console.log(string);
+
+/* 11.21 function */
+// void function ==>
+// var too1 = 6;
+// var too2 = 10;
+// function toogNemeh() {
+//   var niilber = too1 + too2;
+//   console.log(niilber);
+// }
+// toogNemeh();
+// toogNemeh();
+
+// parameter ==>
+function toogNemeh2(too1, too2) {
+  console.log(too1 + too2);
+}
+toogNemeh2(2, 5);
+// toogNemeh2(15, 4);
+// toogNemeh2(15, 4);
+// toogNemeh2(15, 4);
+
+// return hiideg function ==>
+function toogNemeh3(too1, too2) {
+  var niilber = too1 + too2;
+  return niilber;
+}
+console.log(toogNemeh3(4, 5) * 2);
+
+/* Дасгал №13:
+Гараас 2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үрвэрийг буцааж, 1000-с бага бол нийлбэрийг буцаа */
+
+/* Дасгал №14:
+ Гараас тоо өгөгдсөн бол тухайн тоо хүртэлх нийлбэрүүүдийг олж буцаа. */
+
+/* Дасгал №15:
+Гурвалжны суурь болон өндөр өгөгдсөн бол тухайн гурвалжны талбайг олж буцаа. 
+томьёо: (суурь * өндөр) / 2 */
