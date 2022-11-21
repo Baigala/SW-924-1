@@ -258,3 +258,52 @@ console.log(toogNemeh3(4, 5) * 2);
 /* Дасгал №15:
 Гурвалжны суурь болон өндөр өгөгдсөн бол тухайн гурвалжны талбайг олж буцаа. 
 томьёо: (суурь * өндөр) / 2 */
+// var ner = "Baigal";
+// var mergejil = "bagsh";
+
+// if (mergejil == "togooch") {
+//   console.log(ner + " goy hool hiideg.");
+// } else if (mergejil == "bagsh") {
+//   console.log(ner + " hicheel zaadag.");
+// } else if (mergejil == "marketing manager") {
+//   console.log(ner + " poster belddeg.");
+// } else {
+//   console.log("iim mergejil baihgui.");
+// }
+
+// var ner2 = "Zoloo";
+// var mergejil2 = "marketing manager";
+// if (mergejil2 == "togooch") {
+//   console.log(ner2 + " goy hool hiideg.");
+// } else if (mergejil2 == "bagsh") {
+//   console.log(ner2 + " hicheel zaadag.");
+// } else if (mergejil2 == "marketing manager") {
+//   console.log(ner2 + " poster belddeg.");
+// } else {
+//   console.log("iim mergejil baihgui.");
+// }
+
+// function ашиглан хялбарчлах нь
+// function mergejilTodorhoiloh(ner, mergejil) {
+//   if (mergejil == "togooch") {
+//     console.log(ner + " goy hool hiideg.");
+//   } else if (mergejil == "bagsh") {
+//     console.log(ner + " hicheel zaadag.");
+//   } else if (mergejil == "marketing manager") {
+//     console.log(ner + " poster belddeg.");
+//   } else {
+//     console.log("iim mergejil baihgui.");
+//   }
+// }
+// mergejilTodorhoiloh("Baigal", "bagsh");
+// mergejilTodorhoiloh("Zoloo", "marketing manager");
+// mergejilTodorhoiloh("Anu", "togooch");
+
+// global, local
+// var x = 9; // global
+// function toogNemeh3() {
+//   var niilber = 5; // local
+//   console.log(x);
+// }
+// toogNemeh3();
+// console.log(niilber);
