@@ -234,20 +234,20 @@ console.log(string);
 // toogNemeh();
 
 // parameter ==>
-function toogNemeh2(too1, too2) {
-  console.log(too1 + too2);
-}
-toogNemeh2(2, 5);
+// function toogNemeh2(too1, too2) {
+//   console.log(too1 + too2);
+// }
+// toogNemeh2(2, 5);
 // toogNemeh2(15, 4);
 // toogNemeh2(15, 4);
 // toogNemeh2(15, 4);
 
 // return hiideg function ==>
-function toogNemeh3(too1, too2) {
-  var niilber = too1 + too2;
-  return niilber;
-}
-console.log(toogNemeh3(4, 5) * 2);
+// function toogNemeh3(too1, too2) {
+//   var niilber = too1 + too2;
+//   return niilber;
+// }
+// console.log(toogNemeh3(4, 5) * 2);
 
 /* Дасгал №13:
 Гараас 2ш тоо өгөгдсөн ба, хэрэв тэдгээрийн үржвэр 1000-с их бол үрвэрийг буцааж, 1000-с бага бол нийлбэрийг буцаа */
@@ -261,49 +261,34 @@ console.log(toogNemeh3(4, 5) * 2);
 // var ner = "Baigal";
 // var mergejil = "bagsh";
 
-// if (mergejil == "togooch") {
-//   console.log(ner + " goy hool hiideg.");
-// } else if (mergejil == "bagsh") {
-//   console.log(ner + " hicheel zaadag.");
-// } else if (mergejil == "marketing manager") {
-//   console.log(ner + " poster belddeg.");
-// } else {
-//   console.log("iim mergejil baihgui.");
-// }
-
-// var ner2 = "Zoloo";
-// var mergejil2 = "marketing manager";
-// if (mergejil2 == "togooch") {
-//   console.log(ner2 + " goy hool hiideg.");
-// } else if (mergejil2 == "bagsh") {
-//   console.log(ner2 + " hicheel zaadag.");
-// } else if (mergejil2 == "marketing manager") {
-//   console.log(ner2 + " poster belddeg.");
-// } else {
-//   console.log("iim mergejil baihgui.");
-// }
-
-// function ашиглан хялбарчлах нь
-// function mergejilTodorhoiloh(ner, mergejil) {
-//   if (mergejil == "togooch") {
-//     console.log(ner + " goy hool hiideg.");
-//   } else if (mergejil == "bagsh") {
-//     console.log(ner + " hicheel zaadag.");
-//   } else if (mergejil == "marketing manager") {
-//     console.log(ner + " poster belddeg.");
-//   } else {
-//     console.log("iim mergejil baihgui.");
-//   }
-// }
-// mergejilTodorhoiloh("Baigal", "bagsh");
-// mergejilTodorhoiloh("Zoloo", "marketing manager");
-// mergejilTodorhoiloh("Anu", "togooch");
-
-// global, local
-// var x = 9; // global
-// function toogNemeh3() {
-//   var niilber = 5; // local
-//   console.log(x);
-// }
-// toogNemeh3();
-// console.log(niilber);
+/* 11.23 array - массив */
+// массивийн элементүүд рүү index-ээр нь хандаж авна.
+var x = [1, 4, "aa", 10];
+// var z = x[1];
+// array length - хэдэн ширхэг элемэнт байгааг илэрхийлнэ.
+// x.length
+// массивийн хамгийн сүүлчийн element-ийг авах.
+// x[x.length - 1];
+// [1, [3,4,5]][1][0]
+// push() - хамгийн сүүлд элемент нэмж өгнө.
+// pop() - хамгийн сүүлийн элементийг устгах.
+// shift() - хамгийн эхний элементийг устгах.
+// unshift(44) - хамгийн эхэнд элемент нэмэх.
+// slice() - тодорхой хэсгийг тасдаж авна.
+// splice() - тодорхой хэсгийг устгах.
+// reverse() - өгөгдлүүдийн байрлалыг урвуу болгоно.
+// split("хаагуур салгах") - стринг өгөгдлийг салгаж массив болгоно;
+// join("юу залгаж нийлүүлэх") - массивын элементүүдийг хооронд нь стринг болгон нийлүүлнэ.
+// arr.concat(залгах массив); - 2 массивыг хооронд нь залгаад шинэ массив үүсгэнэ.
+for (var i = 0; i < x.length; i++) {
+  console.log(i + " indextei element ni : " + x[i]);
+}
+/*Дасгал №15:
+ Өгөгдсөн массив дотроос 5-д хуваагддаг тоонуудын нийлбэрийг олж буцаа */
+/*Дасгал №16:
+ Өгөгдсөн массивын эхний болон сүүлийн элемент тэнцүү бол true, үгүй бол false буцаа */
+/* Дасгал №17:
+Гараас стринг өгөгдсөн бол тэгш индекс дээрх тэмдэгтүүдийг хэвлэх функц бич. */
+/* Дасгал №18: 
+Өгөгдсөн массив дотор сондгой element болгон сондгой index агуулж, тэгш index болгон тэгш утга агуулж байвал тухайн massiv нь онцгой массив болно. Хэрэв онцгой массив таарвал true эсрэг тохиолдолд false утга буцаа.
+[2, 1, 2, 1, 2]; ==> онцгой массив */
