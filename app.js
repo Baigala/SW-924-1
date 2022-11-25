@@ -337,19 +337,108 @@ console.log(ex18([2, 4, 2, 1, 2]));
 /* Дасгал №19
 string төрлийн тоо өгөгджээ. Бүх тэгш цифрүүдийн нийлбэрийг сондгой цифрүүдийн нийлбэртэй харьцуулж тэгш цифрүүдийн нийлбэр их бол тэгш цифрүүдийн нийлбэр их байна харин сондгой цифрүүдийн нийлбэр нь их байвал сондгой цифрүүдийн нийлбэр нь их хэрвээ тэнцүү байвал цифрүүдийн нийлбэр тэнцүү байна гэсэн утга буцаа.
 string төрлийн тоо ==> "1258" */
-
+function ex19(str) {
+  var tegshTsifruudiinNiilber = 0;
+  var sondgoiTsifruudiinNiilber = 0;
+  var hariu;
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] % 2 == 0) {
+      tegshTsifruudiinNiilber += +str[i];
+    } else if (str[i] % 2 == 1) {
+      sondgoiTsifruudiinNiilber += +str[i];
+    }
+  }
+  if (tegshTsifruudiinNiilber > sondgoiTsifruudiinNiilber) {
+    hariu = "tegsh ni ih.";
+  } else if (sondgoiTsifruudiinNiilber > tegshTsifruudiinNiilber) {
+    hariu = "sondgoi ni ih";
+  } else if (sondgoiTsifruudiinNiilber == tegshTsifruudiinNiilber) {
+    hariu = "tentsuu.";
+  }
+  return hariu;
+}
+console.log(ex19("1234"));
 /* Дасгал №20: Массиваас element устгадаг функц бич. */
-// function ex20(arr, ustgahEl) {}
-// ex20([1, 2, 3], 3);
+function ex20(arr, ustgahEl) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == ustgahEl) {
+      arr.splice(i, 1);
+    }
+  }
+  return arr;
+}
+console.log(ex20([1, 2, 3, "aa"], "aa"));
+
 /*Дасгал №21
 Massiv дотор хамгийн сүүлийн element-ээс бусад бүх утгуудыг нэгтгэж, хамгийн сүүлийн element-тэй таарж байгаа эсэхийг тооцож boolean утга буцаа.*/
-["a", "b", "c", "abc"];
-
+function ex21(arr) {
+  var sum = "";
+  for (var i = 0; i < arr.length - 1; i++) {
+    sum += arr[i];
+  }
+  if (sum == arr[arr.length - 1]) {
+    return true;
+  }
+  return false;
+}
+console.log(ex21(["a", "b", "cd", "abcd"]));
+console.log(ex21(["aa", "bb", "c", "aabbcd"]));
 /* Дасгал №22
  Массив дотор number болон string төрлийн тоонууд өгөгджээ. Зөвхөн number төрлийн тоонуудын нийлбэрийг олж буцаа. */
-
+function ex22(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof arr[i] == "number") {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+// console.log(ex22([1, "1", 3, 5, "4"]));
 /* Дасгал №23
 Массив өгөдсөн бол element тус бүрийг харгалзах indexeer нь үржүүлж үржвэрүүдийн нийлбэрийг буцаа. */
-
+function ex23(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i] * i;
+  }
+  return sum;
+}
+console.log(ex23([1, 2, 4]));
 /* Дасгал №24
  Дан boolean утгууд агуулсан массив өгөгдсөн бол, дотор нь нийт хэдэн ширхэг true утга байгааг олж буцаа. */
+function ex24(arr) {
+  var countTrue = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == true) {
+      countTrue++;
+    }
+  }
+  return countTrue;
+}
+console.log(ex24([true, false, true, true]));
+
+/* 11.23 array - oбьект */
+// {} ==> block haalt
+var shiree = {
+  ongo: "shar",
+  material: "tahia",
+  hemjee: {
+    ondor: "1m",
+    orgon: "50cm",
+  },
+  une: 40000,
+  mendleh: function () {
+    console.log("Hi");
+  },
+  arr: [1, 2, 3],
+};
+console.log(shiree.hemjee.ondor);
+console.log(shiree.une);
+shiree.mendleh();
+shiree.hayag = { duureg: "BZD", khoroo: "39" };
+/* Дасгал №25
+ner, dugaar, email 3-н property-tai student1, student2, student3, student4, student5 objectuud uusgeed massiv dotor hiine. promptoos email awj objectuudaa hadgalsan massiv dotorh objectuudaar dawtalt hiigeed oruulsan emailtai ali neg objectiin email taarj bhin bol tuhain emailtai objectiig consoled hewle. */
+
+/* Дасгал №26
+Хайрцагны урт, өргөн болон өндрийн хэмжээг агуулсан массив өгөгджээ... нийт хайрцагнуудын эзэлхүүнийг буцаа. */
