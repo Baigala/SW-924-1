@@ -19,13 +19,13 @@
 // олон үгээс тогтох урт нэрийг CamelCase ашиглан бичнэ.
 // js ийн түлхүүр үгсээр хувьсагчийг нэрлэж болохгүй.
 
-// өгөгдлийн 5 төрөл
+// өгөгдлийн 5 төрөл - datatype
 // 1. number - 123456789
-// 2. string - "hi" 'hello'
+// 2. string - "hi" 'hello' '2'
 // 3. boolean - true, false
 // 4. null
 // 5. undefined
-
+// primitive datatype || non-primitive
 /* coersion ==>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence */
 
@@ -70,7 +70,7 @@ talbai = PiToo * r * r;
 // < > <= >= && - and || - or !-not
 // % - remainder operator үлдэгдлийг нь авдаг
 // var nas = +prompt("nasaa oruulna uu?");
-// if (nas <= 18) {
+// if (nas < 18) {
 //   console.log("huuhed");
 // } else {
 //   console.log("tom hun");
@@ -264,6 +264,10 @@ talbai = PiToo * r * r;
 /* 11.23 array - массив */
 // массивийн элементүүд рүү index-ээр нь хандаж авна.
 // var x = [1, 4, "aa", 10];
+// x.push(3);
+// for (var i = 0; i < x.length; i++) {
+//   console.log(x[i]);
+// }
 // var z = x[1];
 // array length - хэдэн ширхэг элемэнт байгааг илэрхийлнэ.
 // x.length
@@ -418,7 +422,7 @@ Massiv дотор хамгийн сүүлийн element-ээс бусад бүх
 // }
 // console.log(ex24([true, false, true, true]));
 
-/* 11.23 array - oбьект */
+/* 11.25 oбьект */
 // {} ==> block haalt
 // var shiree = {
 //   ongo: "shar",
@@ -471,13 +475,70 @@ ner, dugaar, email 3-н property-tai student1, student2, student3, student4, stu
 // } else {
 //   alert("emailee oruulna uu?");
 // }
+
 /* Дасгал №26
-3 хайрцагны урт, өргөн болон өндрийн хэмжээг агуулсан массив өгөгджээ... нийт хайрцагнуудын эзэлхүүнүүдийг буцаа. */
-function ex26(boxes) {}
-console.log(
-  ex26([
-    [1, 2, 3],
-    [2, 3, 4],
-    [1, 2, 2],
-  ])
-);
+3 хайрцагны урт, өргөн болон өндрийн хэмжээг агуулсан массив өгөгджээ. нийт хайрцагнуудын эзэлхүүнүүдийг буцаа. */
+// function ex26(boxes) {
+//   var urjwer = 1;
+//   var niilber = 0;
+//   for (var i = 0; i < boxes.length; i++) {
+//     urjwer = 1;
+//     for (var j = 0; j < boxes[i].length; j++) {
+//       urjwer *= boxes[i][j]; // urjwer = urjwer * boxes[i][j]
+//     }
+//     niilber += urjwer;
+//   }
+//   return niilber;
+// }
+// console.log(
+//   ex26([
+//     [1, 2, 1],
+//     [2, 3, 4],
+//     [1, 2, 2],
+//   ])
+// );
+
+// for in
+// var arr = ["a", "b", "c", "d", "e", "f"];
+// for (var i in arr) {
+//   console.log(arr[i]);
+// }
+
+/* Дасгал №31:
+Books object доторх номнуудаар for in давталт ашиглан давталт хийгээд read property ni false номнуудыг console-д хэвлэ. */
+var books = {
+  book1: {
+    author: "Preeti Shenoy",
+    bookName: "A Place Called Home",
+    read: false,
+  },
+  book2: {
+    author: "Geetanjali Shree’s",
+    bookName: "Tomb of Sand",
+    read: true,
+  },
+  book3: {
+    author: "Harish Mehta",
+    bookName: "The Maverick Effect",
+    read: false,
+  },
+};
+for (var index in books) {
+  if (books[index].read == false) {
+    console.log(books[index]);
+  }
+}
+// Гэрт
+/* Дасгал №27. Гараас стринг болон индекс өгөгдсөн бол, стринг дотроос өгөгдсөн индекс хүртэлх тэмдэгтүүдийг устгаж, үлдсэн стрингийг буцаах функц бич */
+
+/* Дасгал №28. 2 ширхэг массив өгөгдсөн бол эхний массиваас зөвхөн сондгой, 2 дахь массиваас зөвхөн тэгш утгуудыг агуулсан шинэ массив үүсгэж буцаа. */
+
+/* Дасгал №29. Object авдаг function бичиж, keys болон value тус тусад нь салгаж буцаах функц бич. */
+
+/* Дасгал №30 
+Бүхэл тооны массив мөн тоо өгөгдсөн бол тухайн тооны нийлбэр болох 2 тооны индэксийг arr дотроос хайж олоод индэксүүдийг нь буцаах функц бич.
+Жишээ нь:
+Өгөгдсөн arr = [2, 7, 11, 15], target = 9,
+nums[0] + nums[1] = 2 + 7 = 9 учир [0, 1] буцаагдана. */
+
+/* Дасгал №31. Өгөгдсөн тоог палиндром эсэхийг шалгах функц бич */
