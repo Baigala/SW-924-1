@@ -528,17 +528,300 @@ for (var index in books) {
     console.log(books[index]);
   }
 }
+
 // Гэрт
 /* Дасгал №27. Гараас стринг болон индекс өгөгдсөн бол, стринг дотроос өгөгдсөн индекс хүртэлх тэмдэгтүүдийг устгаж, үлдсэн стрингийг буцаах функц бич */
+// function ex27(text, index) {
+//   var removeText = "";
+//   var restText = "";
+//   for (var i = 0; i < text[index]; i++) {
+//     removeText += text[i];
+//   }
+//   restText = text.replace(removeText, "");
+//   return restText;
+// }
+// console.log(ex27("1234", 1));
 
 /* Дасгал №28. 2 ширхэг массив өгөгдсөн бол эхний массиваас зөвхөн сондгой, 2 дахь массиваас зөвхөн тэгш утгуудыг агуулсан шинэ массив үүсгэж буцаа. */
-
+// function ex28(arr1, arr2) {
+//   var arrNew = [];
+//   for (var i = 0; i < arr1.length; i++) {
+//     if (arr1[i] % 2 === 1) {
+//       arrNew.push(arr1[i]);
+//     }
+//   }
+//   for (var j = 0; j < arr2.length; j++) {
+//     if (arr2[j] % 2 === 0) {
+//       arrNew.push(arr2[j]);
+//     }
+//   }
+//   return arrNew;
+// }
+// console.log(ex28([1, 2, 3, 4], [5, 6, 7, 8]));
 /* Дасгал №29. Object авдаг function бичиж, keys болон value тус тусад нь салгаж буцаах функц бич. */
+// function ex29(obj) {
+//   var arr = [];
+//   var keyArr = [];
+//   var valueArr = [];
 
+//   for (var key in obj) {
+//     var value = obj[key];
+//     keyArr.push(key);
+//     valueArr.push(value);
+//   }
+//   arr.push(keyArr);
+//   arr.push(valueArr);
+//   return arr;
+// }
+// console.log(ex29({ a: 1, b: 2, c: 3 }));
 /* Дасгал №30 
 Бүхэл тооны массив мөн тоо өгөгдсөн бол тухайн тооны нийлбэр болох 2 тооны индэксийг arr дотроос хайж олоод индэксүүдийг нь буцаах функц бич.
 Жишээ нь:
 Өгөгдсөн arr = [2, 7, 11, 15], target = 9,
 nums[0] + nums[1] = 2 + 7 = 9 учир [0, 1] буцаагдана. */
-
+// function ex30(arr, goal) {
+//   let indexes = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       if (arr[i] + arr[j] === goal) {
+//         indexes.push(i);
+//         indexes.push(j);
+//       }
+//     }
+//   }
+//   return indexes;
+// }
 /* Дасгал №31. Өгөгдсөн тоог палиндром эсэхийг шалгах функц бич */
+// function ex31(number) {
+//   var result = false;
+//   var numString = number.toString();
+//   if (number === +numString.split("").reverse().join("")) {
+//     result = true;
+//   }
+//   return result;
+// }
+// ex31(121);
+
+/*2022.11.30 Сэдэв: es6 нэмэлтүүд */
+// let x = 5;
+// let x = 6;
+// function z() {
+//   x = 5;
+//   console.log(x);
+// }
+// z();
+/* №1. let, const */
+/* let түлхүүр үг ашиглан зарласан хувьсагчийг нэг орчинд дахиж зарлаж өгж болохгүй. */
+// var a = 5;
+// var a = 6;
+// let too = 4;
+// let too = 3;
+/* var түлхүүр үг ашиглан зарласан хувьсагч function дотроо хүчинтэй бол let -> block haalt дотроо хүчинтэй блокон хаалтнаас гадна дуудвал is not defined болсон байна. */
+// function sayHello() {
+//   for (let i = 0; i < 5; i++) {
+//     console.log(i);
+//   }
+//   console.log("i===> " + i);
+// }
+// sayHello();
+/* const түлхүүр үг ашиглан зарласан хувьсагч доторх анхны утгыг нь өөрчилж болохгүй. Жишээ нь: Хүний овог нэр хадгалах, html таг барьж авах.*/
+// const ner = "Baigal";
+// ner = "Zoloo";
+
+// `` - backtick;// var age = 10;
+// console.log("Minii nas bol: " + age);
+// console.log(`Minii nas bol: ${age}`);
+
+/* №2. object дээрх нэмэлтүүд */
+// object-ийн function-ийг method гэж дуудна.
+// es6 дээр method-ийн : function түлхүүр үгийг нь хаяж бичнэ.
+const person1 = {
+  name: "Baigal",
+  walk: function () {
+    console.log(`${this.name} walking`);
+  },
+  talk() {
+    console.log("talks");
+  },
+};
+
+// var x111 = function (too1, too2) {
+//   return too1 + too2;
+// };
+
+// console.log(x111(3, 4) * 2);
+
+// console.log(x(3, 4));
+
+person1.walk();
+person1.talk();
+
+// №3. arrow functions - суман функц нь es6-c гарж ирсэн функцыг бичих илүү товч хялбар бичиглэл юм.
+// function-ийг зарлаж өгөхдөө ашигладаг function түлхүүр үгийг нь хасаад суман функц гэдгийн илэрхийлэхийн тулд => зааж өгнө. Хэрвээ ганц parameter-тай байхын бол () хаалтыг авахгүй байж болно. Мөн блокон хаалт дотор ганц мөртөй код байхаар бол return түлхүүр үг мөн {} ийг нь бичихгүй байж болно.
+// Жишээ 1:
+// const zeregtDewshuul = function (number) {
+//   return number * number;
+// };
+const zeregtDewshuul = (number) => number * number;
+console.log(zeregtDewshuul(5));
+// Жишээ 2:
+const books12 = [
+  { id: 1, isRead: true },
+  { id: 2, isRead: false },
+  { id: 3, isRead: true },
+  { id: 4, isRead: false },
+];
+// const unshsanNom = books12.filter(function (book) {
+//   return book.isRead;
+// });
+// const unshsanNom = books12.filter((book) => book.isRead);
+
+// №4. arrow functions and this
+// Callback functions оbject-ийн функцдээ орохгүй байгаа учир this нь window object-ийг зааж байна.
+// function e() {
+//   console.log(this); // window
+// }
+// const person7 = {
+//   name: "Baigal",
+//   printThis() {
+//     console.log(this);
+//     function ee() {
+//       console.log(this);
+//     }
+//     ee();
+//   },
+// };
+// person7.printThis();
+
+// const person2 = {
+//   talk() {
+//     setTimeout(function () {
+//       console.log("----");
+//       console.log("this ===>", this);
+//     }, 2000);
+//   },
+// };
+// person2.talk();
+
+// Callback function дотор гаднах обьектээ заадаг болгох нь:
+// const person3 = {
+//   talk() {
+//     var self = this;
+//     setTimeout(function () {
+//       console.log("----");
+//       console.log("self ===>", self);
+//     }, 1000);
+//   },
+// };
+// person3.talk();
+// setTimeout function доторх callback function ийг arrow function-оор сольж үзье.
+// const person4 = {
+//   talk() {
+//     setTimeout(() => {
+//       console.log("----");
+//       console.log("arrow function доторх this ===>", this);
+//     }, 3000);
+//   },
+// };
+
+/* №5. Array-тай ажилладаг нэмэлт функцууд*/
+// map - new array үүсгэнэ.
+const colors = ["red", "green", "blue"];
+const arr1 = colors.map((color) => "Энэ бол ийм өнгө: " + color);
+console.log(arr1);
+
+// forEach
+const arr2 = ["a", "b", "c"];
+arr2.forEach(function (element) {
+  console.log(element);
+});
+
+// filter
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+const result = words.filter((word) => word.length > 6);
+console.log(result);
+
+// find
+const arr3 = [5, 12, 8, 130, 44];
+const found = arr3.find((element) => element > 10);
+console.log(found);
+
+// findIndex
+const arr4 = [5, 12, 8, 130, 44];
+console.log(arr4.findIndex((element) => element > 13));
+
+// indexOf
+const beasts = ["ant", "bison", "aa", "duck", "bison"];
+console.log(beasts.indexOf("bison"));
+console.log(beasts.indexOf("bison", 2));
+console.log(beasts.indexOf("giraffe"));
+
+//join
+const elements = ["Fire", "Air", "Water"];
+console.log(elements.join());
+console.log(elements.join(""));
+console.log(elements.join("+"));
+
+// reduce
+const arr5 = [1, 2, 3, 4];
+const anhniiUtga = 0;
+const niilber = arr5.reduce((a, b) => a + b, anhniiUtga);
+console.log(niilber);
+
+// some
+const arr6 = [1, 2, 3, 4, 5];
+const tegshToo = (element) => element % 2 === 0;
+console.log(arr6.some(tegshToo));
+
+//every
+const arr7 = [1, 30, 4, 29, 10, 13];
+const tooo = (currentValue) => currentValue < 40;
+console.log(arr7.every(tooo));
+
+// №6. object destructuring
+const geriinHayag = {
+  uls: "Монгол",
+  hot: "УБ",
+  duureg: "БГД",
+};
+
+// const uls = geriinHayag.uls;
+// const hot = geriinHayag.hot;
+// const duureg = geriinHayag.duureg;
+// дээрх байдлаар хандаж хувьсагчинд хадгалсныг destructuring ашиглан доорх байдлаар бичнэ.
+// const { duureg, hot, uls } = geriinHayag;
+// object-ийн ганц утгыг авахаар бол:
+// const { duureg } = geriinHayag;
+// object-ийн ганц утгыг property-ний нэрнээс өөр нэр өгөх хэрэгтэй бол:
+// const { hot: city } = geriinHayag;
+
+// №7. Spread Operator
+// const first = [1, 2, 3];
+// const second = [4, 5, 6];
+// const negtgesen = first.concat(second);
+// console.log(negtgesen);
+// const SpreadOperatorAshiglanNegtgesen = [...first, "a", "z", ...second, "b"];
+// console.log(SpreadOperatorAshiglanNegtgesen);
+// Object дээр spread operator хэрэглэх нь:
+const toirog = {
+  radius: 10,
+  zuzaan: "10cm",
+};
+
+const ongotoiToirog = {
+  ...toirog,
+  color: "black",
+};
+
+// console.log(ongotoiToirog);
+
+// Дараа үзэх es6 нэмэлтүүд
+// Classes;
+// Promise;
