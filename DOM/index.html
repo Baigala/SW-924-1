@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM selectors</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input class="pass password" id="kfc" type="text" />
+    <div id="parent">
+      <p class="child1 child">aaaa</p>
+      <p class="child2 child">bbb</p>
+      <p class="child3 child">cccc</p>
+      <p class="child4 child">Child 4</p>
+      <p class="child5 child">Child 5</p>
+    </div>
+
+    <!-- Дасгал ажил -->
+    <!-- Тэкст болон өнгөний input-ийн value-г авч container дотор тухайн өнгө болон тэксттэй шинэ p-таг үүсгэнэ үү-->
+    <input id="text" type="text" placeholder="text" />
+    <input id="color" type="color" />
+    <input type="button" value="Insert" onclick="insertTextValue()" />
+    <div class="container"></div>
+    <script>
+      /*2022.12.07*/
+      // select хийж авсан html tag-аа const оор зарласан хувьсагч дотор хадгална.
+
+      // querySelector, getElementById, querySelectorAll
+      //   const inputElement = document.getElementById("kfc");
+      //   const inputElement1 = document.querySelector("#kfc");
+      const inputElement = document.querySelector(".password");
+
+      // camelCase - background-color => backgroundColor, grid-template-rows => gridTemplateRows
+      inputElement.style.backgroundColor = "red";
+      inputElement.style.border = "10px dashed";
+
+      // inputElement.className ===> classuudiig '' string dotor haruulna.
+      // inputElement.classList ===> classuudaar massiv bucaana.
+      //   inputElement3.classList.add("aa");
+
+      const p1 = document.querySelector(".child1");
+      const p2 = document.querySelector(".child2");
+      const p3 = document.querySelector(".child3");
+      //innerHTML - html tag oruulwal ajiluulna
+      p1.innerHTML = "<em>hi</em>";
+      //innerText - tagiig text bdlaar oruulna
+      p3.innerText = "hi";
+
+      // querySelectorAll
+      const pTags = document.querySelectorAll(".child");
+      pTags.forEach((el, i, arr) => {
+        if (i % 2 == 0) {
+          el.style.color = "red";
+        }
+        console.log(arr);
+      });
+    </script>
+  </body>
+</html>
