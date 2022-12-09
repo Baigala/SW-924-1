@@ -12,6 +12,12 @@
     <br />
     <br />
     <h2 id="myH2">Hello how are you?</h2>
+    <br />
+    <p>3 secund huleegeed ur dung harna.</p>
+    <p id="aa"></p>
+    <br />
+    <p>setInterval function</p>
+    <p id="bb"></p>
     <script>
       /*12.09*/
       // beforebegin - before element
@@ -23,6 +29,21 @@
         let html = "<span style='color:red'>Hi</span>";
         h2.insertAdjacentHTML("afterend", html);
       }
+
+      // setTimeout
+      const myTimeout = setTimeout(print, 3000);
+      function print() {
+        document.getElementById("aa").innerText = "gadgfadfa";
+      }
+
+      // setInterval function
+      const element = document.getElementById("bb");
+      const myInterval = setInterval(() => (element.innerText += "Hi"), 1000);
+
+      // clearInterval
+      clearInterval(myInterval);
+
+      //   01:02:57
     </script>
   </body>
 </html>
