@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="insert()">Insert</button>
+    <br />
+    <br />
+    <br />
+    <h2 id="myH2">Hello how are you?</h2>
+    <script>
+      /*12.09*/
+      // beforebegin - before element
+      // afterbegin - first child
+      // beforeend - last child
+      // afterend - after element
+      function insert() {
+        const h2 = document.getElementById("myH2");
+        let html = "<span style='color:red'>Hi</span>";
+        h2.insertAdjacentHTML("afterend", html);
+      }
+    </script>
+  </body>
+</html>
