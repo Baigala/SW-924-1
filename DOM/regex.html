@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regex</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <style></style>
+  </head>
+  <body class="w-full h-screen flex justify-center items-center bg-gray-100">
+    <div class="bg-white rounded-xl p-4 flex flex-col">
+      <label>Password</label>
+      <input
+        class="py-3 px-4 rounded-xl bg-gray-100 mb-4"
+        type="text"
+        id="input"
+      />
+      <p class="text-red-400 requirement">Жижиг үсэг орсон байх</p>
+      <p class="text-red-400 requirement">Том үсэг орсон байх</p>
+      <p class="text-red-400 requirement">Тоо орсон байх</p>
+      <p class="text-red-400 requirement">Тэмдэгт орсон байх - !@#$%^&*</p>
+      <p class="text-red-400 requirement">
+        Хамгийн багадаа 8 тэмдэгт орсон байх
+      </p>
+    </div>
+    <script>
+      // test || match functions
+      // regExp.test(sentence); : boolean.
+      // sentence.match(regExp) : obj | array; 1 ширхэг өгөгдөл байвал object таарж байгаа бүх өгөгдлийг буцаахаар бол massive буцаана.
+      //
+      // g - таарч буй бүх элементийг массив болгон буцаана.
+      // i - ignore the case том жижиг үсгийн ялгааг арилгана.
+      // \d - [0-9] - тоонуудыг илэрхийлнэ.
+      // \D - тооноос бусад тэмдэгтийг авна [^0-9]
+      // \w - стринг илэрхийлнэ. [a-zA-Z]
+      // \W - тэмдэгтүүдийг илэрхийлнэ /[^a-zA-Z0-9_]/.
+      // _ тэмдэгт нь special charactarдаа ордоггүй \W гэж хайх үед гарж ирэхгүй.
+      // \s - white space зайг илэрхийлнэ.
+      // \S - white space-с бусад - [^ ]
+      // ^a - carret юугаар эхлэхийг зааж өгнө.
+      // $ tosgoliig zaana.
+      // [^d] алгасна.
+      // [] - дотор хэд хэдэн шалгах тэмдэгтээ нийлүүлж бичнэ.
+      // a? 0 болон 1 нийцэл буюу нэмэлтээр а байж болно.
+      // + урд байгаа тэмдэгтэй таарж байгаа тэмдгийг авна.
+      // a* 0 болон түүнээс их нийцэл
+      // . оронд юу ч байж болно
+      // {5, 10} - 5-с 10 хооронд, {5} 5 урттай, {,10} - хамгийн ихдээ 10 урттай
+      // | or
+      const sentence =
+        "Hi, my nameaaaaa is Gizmo.Heey I am a fat hat ceaaaat cat. I study in indra institute is is is 143 45_";
+      const regex1 = /i/gi;
+      const regex2 = /\d/g;
+      const regex3 = /e+/g;
+      const regex4 = /ea*/g;
+      const regex5 = /.d/g;
+      const regex6 = /a../g;
+      const regex7 = /\.H/g; // цэг
+      const regex8 = /[fch]at/g;
+      const regex9 = /bla|nin|in./gi;
+      const regex10 = /\b[A-Z]/;
+      const regex11 = /ea?/g;
+      const regex12 = /\w{4}/g;
+
+      //   const found = sentence.match(regex9);
+      //   console.log(found);
+      //   const testing = regex1.test(sentence);
+      //   console.log(testing);
+
+      //   var num = "12/16/2022";
+      //   console.log(num.replace(/\//g, "-"));
+    </script>
+  </body>
+</html>

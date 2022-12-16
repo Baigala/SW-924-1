@@ -62,6 +62,9 @@
         <button id="prev">prev</button>
         <button id="next">next</button>
       </div>
+      <div id="bb">
+        <button>aaa</button>
+      </div>
     </div>
     <script>
       const sliders = document.querySelectorAll(".child");
@@ -88,6 +91,10 @@
         }
         sliders[index].style.display = "block";
       }
+      // event.target
+      // document.addEventListener("click", (event) => {
+      //   console.log(event.target.parentNode.parentNode.parentNode);
+      // });
     </script>
   </body>
 </html>
