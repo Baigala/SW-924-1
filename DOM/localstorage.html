@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // setItem
+      localStorage.setItem("muur", "TOM");
+      localStorage.setItem("nohoi", "Mike");
+      localStorage.setItem("ner", "Sid");
+      // getItem
+      var cat = localStorage.getItem("muur");
+      // removeItem
+      localStorage.removeItem("nohoi");
+      // clear() - buh localStorage dotorh zuiliig ustgana.
+      // localStorage.clear();
+
+      // massiv bolon objectiig JSON.stringify(), JSON.parse() ashiglan hadgalna.
+      const obj = { ner: "Bob", dugaar: "99999999" };
+      const strObj = JSON.stringify(obj);
+      localStorage.setItem("aaa", strObj);
+      const OBJ = localStorage.getItem("aaa");
+      const parsedOBJ = JSON.parse(OBJ);
+      // Гэрт өмнөх хичээлийн бүртгэх хуудасны өгөдлүүдээ localstorage руу хадгалдаг болгож ирэх.
+    </script>
+  </body>
+</html>
