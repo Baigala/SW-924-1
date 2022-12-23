@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IIFE</title>
+  </head>
+  <body>
+    <script>
+      // IIFE- Immediately Inovked Function Expression
+      // function statement
+      function hi() {
+        console.log("hi");
+      }
+      hi();
+      // function expression
+      const hello = function () {
+        console.log("hello");
+      };
+      hello();
+      (function () {
+        var name = "Sid";
+        console.log(`hi ${name}`);
+        (function () {
+          var name = "Gizmo";
+          console.log("yu bna " + name);
+        })();
+        console.log(`how are you ${name}`);
+      })();
+      // overriding
+    </script>
+  </body>
+</html>
