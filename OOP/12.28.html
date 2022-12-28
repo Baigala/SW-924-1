@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Функц болон обьект хандалтат архитектур</title>
+  </head>
+  <body>
+    <script>
+      // OOP - object oriented programming language
+      // Code-g бичих 2 төрлийн аргачлал
+
+      /*1. Функцэд төвлөрсөн загвар
+      Давуу тал: жижиг системийг хурдан програмчлана, хурдтай ажиллана.
+      Дутагдалтай тал: Систем томрохын хэрээр глобаль хувьсагчид хяналтаас гардаг, шпагетти код. */
+
+      /* 2. Обьектуудад төвлөрсөн буюу удамшил ашигласан загвар
+      Өөр өөр үүрэгтэй обьектуудыг загварчилж үүсгэнэ.
+      Өгөгдөл функцуудыг харгалзан тухайн үйл ажиллагааг хийдэг овьектуудад хийж өгнө.
+      Обьект бүр эх обьектдоо бичигдсэн функц өгөгдлүүдийг удамшуулах inheritance өвлөж авна.
+      эх обьект - загвар обьект - object Blue Print
+      Давуу тал: Код эмх цэгцтэй болно.
+      Кодын дахин ашиглалт өснө. */
+      // amitan -> hun -> bagsh
+      // Object.create
+      // __proto__
+      // let p1 = {
+      //   name: "Sid",
+      //   age: 25,
+      // };
+      // p1.address = { duureg: "BZD", khoroo: "7" };
+      // p1.sayHi = function () {
+      //   console.log("HIIadfsa");
+      // };
+      let amitan = { name: "dog" };
+      amitan.hoolloh = function (hoolniiNer) {
+        console.log(hoolniiNer + " idlee.");
+      };
+      let hun = Object.create(amitan);
+      hun.name = "Sid";
+      let bagsh = Object.create(hun);
+      bagsh.bagshlah = function () {
+        console.log("hiceel zaalaa.");
+      };
+      console.log(hun.hoolloh("tsuiwan"));
+      console.log(amitan.hoolloh("ovs"));
+      console.log(bagsh.hoolloh("nom"));
+      console.log(bagsh.__proto__.__proto__);
+    </script>
+  </body>
+</html>
