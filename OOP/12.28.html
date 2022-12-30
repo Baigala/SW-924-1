@@ -37,20 +37,32 @@
       // p1.sayHi = function () {
       //   console.log("HIIadfsa");
       // };
-      let amitan = { name: "dog" };
-      amitan.hoolloh = function (hoolniiNer) {
-        console.log(hoolniiNer + " idlee.");
+      let amitan = {};
+      amitan.age = 10;
+      amitan.name = "snake";
+      amitan.hoolloh = function (ner) {
+        console.log(ner + " hoolloo.");
       };
+
       let hun = Object.create(amitan);
       hun.name = "Sid";
-      let bagsh = Object.create(hun);
-      bagsh.bagshlah = function () {
-        console.log("hiceel zaalaa.");
+      hun.unshih = function () {
+        console.log(this.name + " nom unshlaa.");
       };
-      console.log(hun.hoolloh("tsuiwan"));
-      console.log(amitan.hoolloh("ovs"));
-      console.log(bagsh.hoolloh("nom"));
+
+      let bagsh = Object.create(hun);
+      bagsh.name = "Bazraa";
+      console.log(bagsh.name);
       console.log(bagsh.__proto__.__proto__);
+
+      // Дасгал №1
+      /* materi -> technology, aminal
+       technology -> car, gun.
+       animal -> hun, dog
+       hun -> tsereg, barilgachin */
+
+      // Дасгал №2
+      /*HTML дээр 100px өндөртөй 3 box үүсгэ. Нэг button үүсгэн дарагдах үед дарааллаараа алга болж хамгийн сүүлд 3 уулаа алга болдог функц бич. */
     </script>
   </body>
 </html>
