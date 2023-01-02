@@ -8,15 +8,53 @@
   </head>
   <body>
     <script>
-      // Байгуулагч функц
-      function Person(ner, mergejil) {
-        this.ner = ner;
-        this.mergejil = mergejil;
+      // Байгуулагч функц ашиглан обьект үүсгэх.
+      // new
+      // function Person(ner, mergejil, irts) {
+      //   this.ner = ner;
+      //   this.mergejil = mergejil;
+      //   this.irts = irts;
+      // }
+      // Person.prototype.sayYourName = function () {
+      //   console.log("hi " + this.ner);
+      // };
+      // Person.prototype.changeName = function (shineNer) {
+      //   return (this.ner = shineNer);
+      // };
+      // let p1 = new Person("Nomio", "bla", 10);
+      // let p2 = new Person("Sid", "blabla", 1);
+
+      // class
+      class Person {
+        constructor(ner) {
+          this.ner = ner;
+        }
+        sayYourName() {
+          return `Hii ${this.ner}`;
+        }
+        changeName(shineNer) {
+          return (this.ner = shineNer);
+        }
       }
-      Person.prototype.sayYourName = function () {
-        return this.ner;
-      };
-      const p1 = new Person("Baigal", "bagsh");
+      let person1 = new Person("Gizmo", "barmen");
+      person1.changeName("Sid"); // name ==> Sid bolj oorchlono.
+      class Member extends Person {
+        state = {};
+        constructor(ner, email) {
+          super(ner);
+          this.email = email;
+        }
+        setState(obj) {
+          this.state = {
+            ...obj,
+          };
+        }
+      }
+      let person2 = new Member("Olivia", "oliv@gmail.com");
+      let person3 = new Member("Frank", "franky@gmail.com");
+
+      // Guilgee(Transaction) gesen classaas udamshih Orlogo(Income), Zarlaga(Expense) gesen 2 class bichih. Guilgee(transaction)-ees udamshih function ni info() function bna. info() function tuhain orlogo eswel zarlagiin hedii heriin orlogo bolon zarlaga garsan hemjeeg mon zarlaga bolon orlogiin tailbar buyu neriig haruulna.
+      // Guilgee -> Orlogo, Zarlaga
     </script>
   </body>
 </html>
