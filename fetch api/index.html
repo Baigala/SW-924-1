@@ -1,0 +1,68 @@
+<!-- https://jsonplaceholder.typicode.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="users"></div>
+    <script type="module">
+      import { request } from "./getData.js";
+
+      class DOM {
+        userContainer = document.querySelector(".users");
+        constructor() {
+          this.init();
+          // this.eventListener();
+        }
+
+        async updateUI(data) {
+          this.userContainer.innerHTML = "";
+          data.forEach((user) => {
+            this.userContainer.insertAdjacentHTML(
+              "beforeend",
+              `
+                  <div class="user">
+                      <div class="username" id=${user.id}>${user.name}</div>
+                      <div class="btnContainer">
+                            <div class="btn" id="posts">
+                                  <a href="./posts.html?userId=${user.id}&name=${user.name}">get posts</a>
+                            </div>
+                            <div class="btn" id="todos">
+                                 <a href="./todos.html?userId=${user.id}&name=${user.name}">get todos</a>
+                            </div>
+                            <div class="btn" id="albums">
+                               <a href="./albums.html?userId=${user.id}&name=${user.name}">get albums</a>
+                            </div>
+                      </div>
+                  </div>
+            `
+            );
+          });
+        }
+
+        async init() {
+          this.userContainer.innerHTML = "loading";
+          const { data, error } = await request.req(
+            "https://jsonplaceholder.typicode.com/users"
+          );
+          if (data) {
+            this.updateUI(data);
+            console.log(data);
+          }
+
+          if (error) {
+            this.userContainer.innerHTML = error;
+          }
+        }
+      }
+
+      new DOM();
+    </script>
+  </body>
+</html>
